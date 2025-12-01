@@ -1,0 +1,127 @@
+/* --- App.css --- */
+
+/* Atur warna background utama dan warna teks default menjadi terang */
+body {
+  background-color: #1a1a1a; /* Latar belakang gelap */
+  color: #e0e0e0; /* Teks utama berwarna terang */
+  font-family: 'Segoe UI', system-ui, sans-serif;
+  margin: 0;
+  padding: 20px;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+h1, h2, h3 {
+    color: #ffffff; /* Judul berwarna putih bersih */
+}
+
+.grid-layout {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+/* Styling untuk Kartu/Container */
+.card {
+  background: #2d2d2d; /* Warna latar kartu sedikit lebih terang dari body */
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.5); /* Shadow lebih gelap */
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  border: 1px solid #444; /* Border halus */
+}
+
+/* Styling untuk Label */
+label {
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: #bbbbbb; /* Warna label abu-abu terang */
+  margin-bottom: 5px;
+  display: block;
+}
+
+/* Styling untuk Input dan Textarea (Bagian yang diperbaiki) */
+textarea, input[type="text"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #555; /* Warna border input */
+  border-radius: 6px;
+  font-family: monospace;
+  box-sizing: border-box;
+  
+  /* PERBAIKAN WARNA DI SINI */
+  background-color: #3d3d3d; /* Latar belakang input lebih gelap */
+  color: #ffffff; /* Teks di dalam input berwarna putih */
+  font-size: 1rem;
+}
+
+/* Saat input diklik/aktif */
+textarea:focus, input[type="text"]:focus {
+    outline: none;
+    border-color: #2563eb; /* Warna border saat aktif (biru) */
+    background-color: #454545; /* Sedikit lebih terang saat aktif */
+}
+
+
+/* Styling Tombol */
+button {
+  cursor: pointer;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  transition: 0.2s;
+  font-size: 0.9rem;
+}
+
+.btn-primary { 
+    background-color: #2563eb; /* Biru */
+    color: white; 
+}
+.btn-primary:hover { background-color: #1d4ed8; }
+
+.btn-action { 
+    background-color: #e0e0e0; /* Tombol aksi berwarna terang */
+    color: #1a1a1a; /* Teks tombol gelap */
+}
+.btn-action:hover { background-color: #ffffff; }
+
+
+/* Styling untuk kotak hasil matematika (e, n, d) */
+.math-box {
+  background: #3d3d3d; /* Latar belakang gelap */
+  color: #81a1c1; /* Warna teks biru muda agar menonjol */
+  padding: 10px;
+  border-radius: 5px;
+  font-family: monospace;
+  word-break: break-all;
+  border: 1px dashed #555;
+}
+
+.math-box.secret {
+    color: #d08770; /* Warna oranye/kemerahan untuk private key */
+}
+
+
+/* Styling Area Log */
+.logs-area {
+  margin-top: 30px;
+  background: #111111; /* Latar belakang log sangat gelap */
+  color: #a3be8c; /* Teks log berwarna hijau */
+  padding: 20px;
+  border-radius: 8px;
+  font-family: 'Courier New', monospace;
+  max-height: 200px;
+  overflow-y: auto;
+  border: 1px solid #333;
+}
